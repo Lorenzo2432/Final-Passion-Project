@@ -1,0 +1,194 @@
+<div class="my">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
+    <!-- Toolbar -->
+    
+    <div class="color">
+    
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="/direct">Direct</a>
+        <a href="/about">About</a>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="jumbotron text-center">
+        <h1>People Test</h1>
+        <p>View different People that play different sports
+        </p> 
+      </div>
+  
+
+      <form [formGroup]="userInfo" (ngSubmit)="createNewUser()">
+      <label for="fname">First name:</label><br>
+      <input formControlName="firstname"type="text" id="fname" name="fname"><br>
+      <label for="fname">Last name:</label><br>
+      <input formControlName="lastname"type="text" id="fname" name="fname"><br>
+      <label for="lname">Favorite Sport:</label><br>
+      <input formControlName="sport"type="text" id="lname" name="lname"><br><br>
+      <button id="button" type="submit">Submit</button>
+      
+    </form> 
+    
+    <ul *ngFor = "let v of users">
+      <li>{{v.firstname}}</li>
+      <li>{{v.lastname}}</li>
+      <li>{{v.sport}}</li>
+    </ul>
+
+  <mat-card>
+      
+    <mat-expansion-panel hideToggle [style.backgroundColor]="'#2274A5'">
+      <mat-expansion-panel-header [style.backgroundColor]="'#2274A5'">
+        <mat-panel-title>
+          <mat-list>
+            <mat-list-item *ngFor="let messages of messages">
+             <img matListAvatar src="../assets/Carlos.png" alt="...">
+      <h3 matLine> {{messages.from}} {{messages.subject}} </h3>
+             
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title >
+        
+        <mat-panel-description>
+      
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h1>Age/Ethnicity</h1>
+      <p>15 years old , Hispanic</p>
+      <h1>Carlos Lorenzo</h1>
+     <p>I like to play Soccer </p>
+    </mat-expansion-panel>
+  </mat-card>
+  
+  <mat-card>
+    <mat-expansion-panel hideToggle [style.backgroundColor]="'#2274A5'">
+        <mat-expansion-panel-header [style.backgroundColor]="'#2274A5'">
+        <mat-panel-title>
+          <mat-list>
+            <mat-list-item *ngFor="let manuel of manuel">
+              <img matListAvatar src="../assets/dad.png" alt="...">
+      <h3 matLine> {{manuel.from}} {{manuel.subject}} </h3>
+             
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title>
+        
+        <mat-panel-description>
+      
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+     <p>I like to play BasketBall </p>
+    </mat-expansion-panel>
+  </mat-card>
+  
+  
+  
+  
+  <mat-card>
+    <mat-expansion-panel hideToggle [style.backgroundColor]="'#2274A5'">
+        <mat-expansion-panel-header [style.backgroundColor]="'#2274A5'">
+        <mat-panel-title>
+          <mat-list>
+            <mat-list-item *ngFor="let dad of dad">
+              <img matListAvatar src="../assets/mohammed.png" alt="...">
+              <h3 matLine> {{dad.from}} {{dad.subject}} </h3>
+             
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title>
+        
+        <mat-panel-description>
+      
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+     <p>I like to play Baseball </p>
+    </mat-expansion-panel>
+  </mat-card>
+  
+  
+  
+  
+  
+  <mat-card>
+    <mat-expansion-panel hideToggle [style.backgroundColor]="'#2274A5'">
+        <mat-expansion-panel-header [style.backgroundColor]="'#2274A5'">
+        <mat-panel-title>
+          <mat-list>
+            <mat-list-item *ngFor="let kevin of kevin">
+              <img matListAvatar src="../assets/kevin.png" alt="...">
+              <h3 matLine> {{kevin.from}}  {{kevin.subject}}</h3>
+             
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title>
+        
+        <mat-panel-description>
+      
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+     <p>I like to play Football</p>
+    </mat-expansion-panel>
+  </mat-card>
+  
+  
+  
+  
+  
+  <mat-card>
+    <mat-expansion-panel hideToggle [style.backgroundColor]="'#2274A5'">
+        <mat-expansion-panel-header [style.backgroundColor]="'#2274A5'">
+        <mat-panel-title>
+          <mat-list>
+            <mat-list-item *ngFor="let ali of ali">
+              <img matListAvatar src="../assets/ali.png" alt="...">
+              
+              <h3 matLine> {{ali.from}}  {{ali.subject}} </h3>
+              
+             
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title>
+        
+        <mat-panel-description>
+      
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+     <p>I like to go dirt biking in the montains and enjoy the fun of it</p>
+    </mat-expansion-panel>
+  </mat-card>
+  
+  <mat-card>
+    <mat-expansion-panel hideToggle [style.backgroundColor]="'#2274A5'">
+        <mat-expansion-panel-header [style.backgroundColor]="'#2274A5'">
+        <mat-panel-title>
+          <mat-list>
+            <mat-list-item *ngFor="let david of david">
+              <img matListAvatar src="../assets/david.png" alt="...">
+              <h3 matLine> {{david.from}} {{david.subject}} </h3>
+             
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title>
+  
+        <mat-panel-description>
+        
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+     <p>I like to go cycling and go out with my frinds out in the city</p>
+    </mat-expansion-panel>
+  </mat-card>
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</div>
+</div>
+  <router-outlet></router-outlet>
+  
